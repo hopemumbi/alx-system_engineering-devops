@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
+# This script loopd from 1 t0 10 and;
+#	displays bad luck for the 4th loop iteration
+#	displays good luck for the 8th loop iteration
+#	displays Best School for the other iterations
 
-s1="bad luck"
-s2="good luck"
-s3="Best School"
 i=1
-
 while [ $i -le 10 ];
 do
 	if [ $i -eq 4 ]
 	then
-		echo "$s1"
+		echo "bad luck"
 	elif [ $i -eq 8 ]
 	then
-		echo "$s2"
+		echo "good luck"
 	else
-		echo "$s3"
+		echo "Best School"
 	fi
 	((i++))
 done
