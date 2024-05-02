@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+s1="Best School"
+i=0
+
+until [ $i -gt 9 ];
+do
+	echo "$s1"
+	((i++))
+done
