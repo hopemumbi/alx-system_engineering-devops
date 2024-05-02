@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Displays Best School 10 times
+# but for the 9th iteration, Best School and then Hi on a new line.
+
 s1="Best School"
 s2="Hi"
 i=1
@@ -7,6 +10,7 @@ while [ $i -le 10 ];
 do
 	if [ $i -eq 9 ]
 	then
+		echo "$s1"
 		echo "$s2"
 	else
 		echo "$s1"
