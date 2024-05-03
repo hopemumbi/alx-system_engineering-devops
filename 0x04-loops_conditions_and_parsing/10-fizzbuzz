@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This bash script displays numbers from 1 to 100 'fizzbuzz'
 
 for i in {1..100};
 do
