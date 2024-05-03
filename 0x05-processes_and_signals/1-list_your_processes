@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Displays a list of currently running processes
+# a: Show all processes, for all users
+# u: Display in a user-oriented format
+# x: Lift the "must have a tty" restriction
+# f: Do full-format listing.
+
+ps auxf
