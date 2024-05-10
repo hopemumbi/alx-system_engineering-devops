@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Trap signals and handle them appropriately
+trap 'echo "I hate the kill command";' SIGTERM
+trap 'echo "Y U no love me?!";' SIGINT
+trap 'rm -f /var/run/myscript.pid; exit 0;' SIGQUIT SIGTERM
+
+# Write PID to file
+echo $$ > /var/run/myscript.pid
+
+# Display message indefinitely
+while true; do
+    echo "To infinity and beyond"
+    sleep 1
+done
