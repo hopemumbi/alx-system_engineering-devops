@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
-# Bash script than
+# Bash script that
+
+# Deletes the file /var/run/myscript.pid
+delete()
+{
+	rm -f /var/run/myscript.pid
+	exit 0
+}
 
 # Write PID to file
 echo $$ > /var/run/myscript.pid
@@ -11,6 +18,6 @@ do
     sleep 1
     # Trap signals and handle them appropriately
     trap 'echo "Y U no love me?!";' SIGINT
-    trap 'echo "I hate the kill command";' SIGTERM
-    trap 'rm -f /var/run/myscript.pid; exit 0;' SIGQUIT SIGTERM
+    trap 'echo "I hate the kill command" && delete' SIGTERM
+    trap 'delete' SIGQUIT
 done
